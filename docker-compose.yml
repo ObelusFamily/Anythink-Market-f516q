@@ -25,6 +25,7 @@ services:
     environment:
       - NODE_ENV=development
       - PORT=3001
+      - API_ROOT="http://192.168.122.23:3000/api"
     working_dir: /usr/src
     volumes:
       - ./:/usr/src/

@@ -15,5 +15,9 @@ When implementing a new feature or fixing a bug, please create a new pull reques
   - docker
   - build-essential
 - Clone the repo
-- Edit `frontend/src/agent.js` to point `API_ROOT` to your VM's IP address
 - Run `sudo docker-compose up -d`
+- On your local machine install `socat` and run:
+  ```bash
+  socat TCP-LISTEN:3000,reuseaddr,fork TCP4:192.168.122.23:3000 &
+  socat TCP-LISTEN:3001,reuseaddr,fork TCP4:192.168.122.23:3001 &
+  ```
